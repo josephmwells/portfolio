@@ -25,7 +25,7 @@ body {
   margin: 0 auto;
 }
 
-@media (min-width: 700px){
+@media screen and (min-width: 700px){
   .main-container {
     padding-top: 20px;
     width: 45%;
@@ -58,7 +58,7 @@ body {
   }
 }
 
-@media (min-width: 975px){
+@media screen and (min-width: 975px){
   .main-container {
     margin: 0 auto;
   }
