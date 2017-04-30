@@ -196,8 +196,22 @@ body {
   animation: 0.5s ease-out slideInLeft;
 }
 
-.info-container p{
-  padding-bottom: 10px;
+.info-container .title{
+  padding-bottom: 0px;
+}
+
+.info-container .info-header{
+  display: inline;
+  padding-top: 10px;
+  text-decoration: underline;
+}
+
+.info-container .info-header:hover{
+  filter: invert(1);
+}
+
+.info-container .info-text{
+  display: none;
 }
 
 .info-container a{

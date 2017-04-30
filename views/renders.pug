@@ -2,6 +2,7 @@ doctype html
 html(lang='en')
   head
     meta(charset='UTF-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
     title a portal to another world
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
     link(href="css/styles.css" rel="stylesheet" type='text/css')
@@ -9,20 +10,23 @@ html(lang='en')
     
   body
     
-    mixin work-link(title, image, webm, link)
+    mixin work-link(title, image, webm, text, link)
       .info-container
         if title
           p(class='centered')= title
         if link
           if webm
-            a(href=link): video(class='centered' src=image controls loop)
+            a(href=link): video(class='centered' src=image controls autoplay loop)
           else
             a(href=link): img(class='centered' src=image)
         else
           if webm
-            video(class='centered' src=image autoplay loop)
+            video(class='centered' src=image controls autoplay loop)
           else
             img(class='centered' src=image)
+        if text
+          p(class='info-header') <strong>info</strong>
+          p(class='info-text')= text
         
     .main-container
       .nav-container
@@ -41,10 +45,10 @@ html(lang='en')
           
       .info-container
         p(class='centered') a collection of renders made in Cinema 4D and edited in Photoshop and After Effects respectively
-      +work-link('bead bust', '/images/cinema4d/still/bead-bust-00-min.jpg', false, '/images/cinema4d/still/bead-bust-00.jpg')
-      +work-link('can not rest', '/images/cinema4d/still/laying-pose-1080-2-min.jpg', false, '/images/cinema4d/still/laying-pose-1080-2.jpg')
-      +work-link("god's light", '/images/cinema4d/still/gods-light-min.jpg', false, '/images/cinema4d/still/gods-light.jpg')
-      +work-link('last night', '/images/cinema4d/still/purple-block-min.png', false, '/images/cinema4d/still/purple-block.png')
+      +work-link('bead bust', '/images/cinema4d/still/bead-bust-00-min.jpg', false, flase, '/images/cinema4d/still/bead-bust-00.jpg')
+      +work-link('can not rest', '/images/cinema4d/still/laying-pose-1080-2-min.jpg', false, false, '/images/cinema4d/still/laying-pose-1080-2.jpg')
+      +work-link("god's light", '/images/cinema4d/still/gods-light-min.jpg', false, false, '/images/cinema4d/still/gods-light.jpg')
+      +work-link('last night', '/images/cinema4d/still/purple-block-min.png', false, false, '/images/cinema4d/still/purple-block.png')
       +work-link(false, 'https://fat.gfycat.com/IdleDarkFox.webm', true)
       +work-link(false, 'https://fat.gfycat.com/DeliciousElatedBonobo.webm', true)
       +work-link(false, 'https://fat.gfycat.com/DesertedDirtyIndianrhinoceros.webm', true)

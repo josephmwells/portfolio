@@ -15,3 +15,7 @@ $( ".dropdown > a" ).click(function() {
   console.log('hovering');
 });
 */
+
+$(".info-header").click(function() {
+  $(this).next().toggle("fast");
+});

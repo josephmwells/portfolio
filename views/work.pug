@@ -2,6 +2,7 @@ doctype html
 html(lang='en')
   head
     meta(charset='UTF-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
     title a portal to another world
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
     link(href="css/styles.css" rel="stylesheet" type='text/css')
@@ -9,13 +10,16 @@ html(lang='en')
     
   body
     
-    mixin work-link(title, image, path, webm)
+    mixin work-link(title, image, path, webm, text)
       .info-container
-        a(class='centered' href= path): p= title
+        a(class='centered title' href= path): p= title
         if webm
           a(class='centered' href= path): video(src=image controls autoplay loop)
         else
           a(class='centered' href= path): img(src=image)
+        if text
+          p(class='info-header') <strong>info</strong>
+          p(class='info-text')= text
         
     .main-container
       .nav-container
@@ -32,9 +36,9 @@ html(lang='en')
               li: a(href='https://spacepunk.media') spacepunk.media
           li: a(href='/about') about
           
-      +work-link('visuals', '/images/atlantis-deep/img-00.png', '/visuals', false)
-      +work-link('3D renders', '/images/cinema4d/still/bead-bust-00.jpg', '/renders', false)
-      +work-link('motion graphics', 'https://zippy.gfycat.com/MiserableBetterBarb.webm', '/motion', true)
+      +work-link('visuals', '/images/atlantis-deep/img-00.png', '/visuals', false, 'a visual series from a video performance at the Atlantis Lounge, Portland')
+      +work-link('3D renders', '/images/cinema4d/still/bead-bust-00.jpg', '/renders', false, 'a collection of renders made in Cinema 4D and edited in Photoshop and After Effects respectively')
+      +work-link('motion graphics', 'https://zippy.gfycat.com/MiserableBetterBarb.webm', '/motion', true, 'examples of motion graphics work made in After Effects and Cinema 4D')
       +work-link('installations', '/images/paintir.png', '/installations', false)
       +work-link('creative coding', '/images/paintir.png', '/coding', false)
       +work-link('spacepunk.media', '/images/spacepunk.png', 'https://spacepunk.media', false)
