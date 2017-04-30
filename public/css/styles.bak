@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  letter-spacing: .10em;
+  list-style: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+}
+
+.main-container{
+  padding-top: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media (min-width: 600px){
+  .main-container {
+    padding-top: 20px;
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  .nav-container a {
+    padding-right: 20px;
+  }
+
+  .info-container{
+    font-size: 0.8em;
+  }
+}
+
+/*<-----NAV----->*/
+
+.nav-container{
+  width: 100%;
+  padding-bottom: 10px;
+
+  animation: 0.5s ease-out slideInDown;
+}
+
+.nav-conatiner ul {
+}
+
+.nav-container li {
+  display: inline-block;
+}
+.nav-container a {
+  padding-right: 10px;
+}
+
+.nav-container a:hover {
+  -webkit-filter: hue-rotate(-90deg);
+  filter: hue-rotate(-90deg);
+
+  transition: 0.2s;
+}
+
+.nav-container .active{
+-webkit-filter: hue-rotate(90deg);
+filter: hue-rotate(90deg);
+}
+
+/*.nav-container li:hover .dropdown{
+  visibility: visible;
+  opacity: 1;
+
+  transition: 0.2s 0s;
+}*/
+
+.dropdown{
+  display: flex;
+  position: absolute;
+
+  z-index: 10;
+  left: -60px;
+  padding-left: 10px;
+
+  visibility: visible;
+  opacity: 1;
+
+  white-space:nowrap;
+  border-top: 1px solid black;
+
+  transition: 0.4s 0.2s;
+}
+
+.dropdown a:hover{
+  -webkit-filter: hue-rotate(-90deg);
+  filter: hue-rotate(-90deg);
+
+  transition: 0.2s;
+}
+
+/*<-----BODY----->*/
+
+.info-container{
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 10px;
+  padding: 10px;
+
+  font-size: 0.8em;
+
+  border-style: outset;
+  border-width: 3px;
+  border-color: #d0d0d0;
+  box-shadow: 0px 0px 8px 0px #2e2e2e;
+
+  animation: 0.5s ease-out slideInLeft;
+}
+
+.centered{
+  margin: auto;
+  text-align: center;
+}
+
+.info-container p{
+  padding-bottom: 10px;
+}
+
+.info-container img, .info-container video{
+  width: 100%;
+}
+
+
+
+@keyframes slideInDown {
+  0%{
+    transform: translateY(-100%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+
+@keyframes slideInLeft {
+  0%{
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}

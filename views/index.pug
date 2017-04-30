@@ -1,0 +1,40 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title a portal to another world
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    //link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css')
+    //script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js')
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+    link(href="css/styles.css" rel="stylesheet" type='text/css')
+    
+  body
+    mixin work-link(title, image, webm)
+      .info-container
+        if title
+          p(class='centered')= title
+        if webm
+          video(class='centered' src=image autoplay loop)
+        else
+          img(class='centered' src=image)
+        
+    .main-container
+      .nav-container
+        ul(class='nav-main')
+          li: a(class='active' href='/') home
+          li(class='dropdown')
+            a(class='work' href='/work' ) work
+            ul(class='dropdown-open')
+              li: a(href='/visuals') visuals
+              li: a(href='/renders') 3D renders
+              li: a(href='/motion') motion graphics
+              li: a(href='/installations') installations
+              li: a(href='/coding') creative coding
+              li: a(href='https://spacepunk.media') spacepunk.media
+          li: a(href='/about') about
+      .info-container
+        p.
+          Joseph Wells is a contemporary New Media artist based in Portland, Oregon. With a background in Computer Science and Computer Engineering at PSU, Joseph transferred to PNCA in the Spring of 2015 where he has been studying an Intermedia practice focusing in New Media. Using his knowledge of programming and hardware design, Joseph has been merging procedural programming techniques and software integration into his visual design works. He performs live visuals in Portland’s music scene, and works closely with musicians and performers within a variety of disciplines. His upcoming pursuits involve virtual reality, generative video and sound performance, 3D printing, and abstract hardware hacking.
+          
+  script(src='/javascripts/script.js')

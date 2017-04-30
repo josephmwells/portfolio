@@ -1,0 +1,15 @@
+{
+  "name": "portfolio-site",
+  "version": "1.0.0",
+  "description": "a portfolio site for Joseph Wells",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "Joseph Wells",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "pug": "^2.0.0-beta.12"
+  }
+}
