@@ -15,7 +15,7 @@ html(lang='en')
           p(class='centered')= title
         if link
           if webm
-            a(href=link): video(class='centered' src=image autoplay loop)
+            a(href=link): video(class='centered' src=image controls loop)
           else
             a(href=link): img(class='centered' src=image)
         else

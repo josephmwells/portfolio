@@ -13,7 +13,7 @@ html(lang='en')
       .info-container
         a(class='centered' href= path): p= title
         if webm
-          a(class='centered' href= path): video(src=image autoplay loop)
+          a(class='centered' href= path): video(src=image controls loop)
         else
           a(class='centered' href= path): img(src=image)
         
