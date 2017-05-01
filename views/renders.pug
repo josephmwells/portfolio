@@ -16,12 +16,16 @@ html(lang='en')
           p(class='centered title')= title
         if link
           if webm
-            video(class='centered' src=image controls autoplay loop)
+            video(controls autoplay loop)
+              source(src= image + ".webm" type="video/webm")
+              source(src= image + ".mp4" type="video/mp4")
           else
             a(href=link): img(class='centered' src=image)
         else
           if webm
-            video(class='centered' src=image controls autoplay loop)
+            video(controls autoplay loop)
+              source(src= image + ".webm" type="video/webm")
+              source(src= image + ".mp4" type="video/mp4")
           else
             img(class='centered' src=image)
         if text
@@ -50,10 +54,10 @@ html(lang='en')
       +work-link('can not rest', '/images/cinema4d/still/laying-pose-1080-2-min.jpg', false, false, '/images/cinema4d/still/laying-pose-1080-2.jpg')
       +work-link("god's light", '/images/cinema4d/still/gods-light-min.jpg', false, false, '/images/cinema4d/still/gods-light.jpg')
       +work-link('last night', '/images/cinema4d/still/purple-block-min.png', false, false, '/images/cinema4d/still/purple-block.png')
-      +work-link(false, 'https://fat.gfycat.com/IdleDarkFox.webm', true)
-      +work-link(false, 'https://fat.gfycat.com/DeliciousElatedBonobo.webm', true)
-      +work-link(false, 'https://fat.gfycat.com/DesertedDirtyIndianrhinoceros.webm', true)
-      +work-link(false, 'https://zippy.gfycat.com/KindHappyBasil.webm', true)
+      +work-link(false, 'https://fat.gfycat.com/IdleDarkFox', true)
+      +work-link(false, 'https://fat.gfycat.com/DeliciousElatedBonobo', true)
+      +work-link(false, 'https://fat.gfycat.com/DesertedDirtyIndianrhinoceros', true)
+      +work-link(false, 'https://zippy.gfycat.com/KindHappyBasil', true)
       
   script(src='javascripts/script.js')
       

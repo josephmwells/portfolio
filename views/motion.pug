@@ -15,7 +15,9 @@ html(lang='en')
         if title
           a(class='centered' href=link): p= title
         if webm
-          video(class='centered' src=image controls loop)
+          video(controls autoplay loop)
+            source(src= image + ".webm" type="video/webm")
+            source(src= image + ".mp4" type="video/mp4")
         else
           img(class='centered' src=image)
         if text
@@ -40,16 +42,16 @@ html(lang='en')
       .info-container
         p(class='centered').
           examples of motion graphics work made in After Effects and Cinema 4D
-      +work-link('motion graphics — bouncing transformation', 'https://vimeo.com/199481317', 'https://zippy.gfycat.com/MiserableBetterBarb.webm', true, 'Ball bounces, transforms to square -- made in After Effects')
-      +work-link('motion graphics — greeble-text', 'https://vimeo.com/199890909', 'https://zippy.gfycat.com/WarmBlandAntelope.webm', true, "an example of greeble'd text and its practical use: A greeble or nurnie is a fine detailing added to the surface of a larger object that makes it appear more complex, and therefore more visually interesting. -- made in After Effects")
-      +work-link('experimental — dreamtree-00', 'https://vimeo.com/199482449', 'https://fat.gfycat.com/EnviousShyBlackrussianterrier.webm', true, "Collaboration between Joseph Wells and Makai Mendiola - Seamless loop depicting a rendered sakura tree, spinning on an abstract landscape. -- made in After Effects and Cinema 4D")
-      +work-link('experimental — dn_vacay_00', 'https://vimeo.com/199481646', 'https://giant.gfycat.com/WillingObviousEland.webm', true, "Collaboration between Joseph Wells and Makai Mendiola - Seamless loop depicting a deformed bust, spinning on an abstract landscape. -- made in After Effects and Cinema 4D")
-      +work-link('motion graphics — dyanmic-weight', 'https://vimeo.com/199942300', 'https://zippy.gfycat.com/AggressiveInconsequentialBlackrussianterrier.webm', true, "two examples of dynamic-weight and movement -- made in After Effects")
-      +work-link('motion graphics — 2D 3d-object', 'https://vimeo.com/199936663', 'https://zippy.gfycat.com/GracefulFabulousDoe.webm', true, "flat shaded 3D object, with a tracked and composited screen -- made using After Effects and Cinema 4D")
-      +work-link('motion graphics — bad/blurry footage track + composite', 'https://vimeo.com/199933080', 'https://zippy.gfycat.com/InferiorKindlyHind.webm', true, "tracking + compositing bad//blurry green screen footage -- made in Adobe After Effects + mocha AE")
-      +work-link('motion graphics — tracking + comping 3d objects', 'https://vimeo.com/199933533', 'https://fat.gfycat.com/SparklingScratchyIndianpangolin.webm', true, "tracking + compositing a 3d object onto a stock footage -- made in After Effects and Cinema 4D")
-      +work-link('animation — animate turangalila - glitchd', 'https://vimeo.com/159004734', 'https://giant.gfycat.com/ScaryLividGalapagosdove.webm', true, "Submission for Animate Turangalila proposal for Oregon Symphony Sights+Sounds headed by Rose Bond -- made in After Effects using Red Giant Trapcode")
-      +work-link('animation — animate turangalila — silk motion', 'https://vimeo.com/159004736', 'https://giant.gfycat.com/GaseousDearestAiredaleterrier.webm', true, "Submission for Animate Turangalila proposal for Oregon Symphony Sights+Sounds headed by Rose Bond -- made in After Effects using Red Giant Trapcode")
-      +work-link('animation — animate aurangalila — tchaikovsky-genrative', 'https://vimeo.com/159010486', 'https://fat.gfycat.com/BothSpiritedAmberpenshell.webm', true, "Submission for Animate Turangalila proposal for Oregon Symphony Sights+Sounds headed by Rose Bond -- made in After Effects using Red Giant Trapcode")
+      +work-link('motion graphics — bouncing transformation', 'https://vimeo.com/199481317', 'https://zippy.gfycat.com/MiserableBetterBarb', true, 'Ball bounces, transforms to square -- made in After Effects')
+      +work-link('motion graphics — greeble-text', 'https://vimeo.com/199890909', 'https://zippy.gfycat.com/WarmBlandAntelope', true, "an example of greeble'd text and its practical use: A greeble or nurnie is a fine detailing added to the surface of a larger object that makes it appear more complex, and therefore more visually interesting. -- made in After Effects")
+      +work-link('experimental — dreamtree-00', 'https://vimeo.com/199482449', 'https://fat.gfycat.com/EnviousShyBlackrussianterrier', true, "Collaboration between Joseph Wells and Makai Mendiola - Seamless loop depicting a rendered sakura tree, spinning on an abstract landscape. -- made in After Effects and Cinema 4D")
+      +work-link('experimental — dn_vacay_00', 'https://vimeo.com/199481646', 'https://giant.gfycat.com/WillingObviousEland', true, "Collaboration between Joseph Wells and Makai Mendiola - Seamless loop depicting a deformed bust, spinning on an abstract landscape. -- made in After Effects and Cinema 4D")
+      +work-link('motion graphics — dyanmic-weight', 'https://vimeo.com/199942300', 'https://zippy.gfycat.com/AggressiveInconsequentialBlackrussianterrier', true, "two examples of dynamic-weight and movement -- made in After Effects")
+      +work-link('motion graphics — 2D 3d-object', 'https://vimeo.com/199936663', 'https://zippy.gfycat.com/GracefulFabulousDoe', true, "flat shaded 3D object, with a tracked and composited screen -- made using After Effects and Cinema 4D")
+      +work-link('motion graphics — bad/blurry footage track + composite', 'https://vimeo.com/199933080', 'https://zippy.gfycat.com/InferiorKindlyHind', true, "tracking + compositing bad//blurry green screen footage -- made in Adobe After Effects + mocha AE")
+      +work-link('motion graphics — tracking + comping 3d objects', 'https://vimeo.com/199933533', 'https://fat.gfycat.com/SparklingScratchyIndianpangolin', true, "tracking + compositing a 3d object onto a stock footage -- made in After Effects and Cinema 4D")
+      +work-link('animation — animate turangalila - glitchd', 'https://vimeo.com/159004734', 'https://giant.gfycat.com/ScaryLividGalapagosdove', true, "Submission for Animate Turangalila proposal for Oregon Symphony Sights+Sounds headed by Rose Bond -- made in After Effects using Red Giant Trapcode")
+      +work-link('animation — animate turangalila — silk motion', 'https://vimeo.com/159004736', 'https://giant.gfycat.com/GaseousDearestAiredaleterrier', true, "Submission for Animate Turangalila proposal for Oregon Symphony Sights+Sounds headed by Rose Bond -- made in After Effects using Red Giant Trapcode")
+      +work-link('animation — animate aurangalila — tchaikovsky-genrative', 'https://vimeo.com/159010486', 'https://fat.gfycat.com/BothSpiritedAmberpenshell', true, "Submission for Animate Turangalila proposal for Oregon Symphony Sights+Sounds headed by Rose Bond -- made in After Effects using Red Giant Trapcode")
 
   script(src='javascripts/script.js')

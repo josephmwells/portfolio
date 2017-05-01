@@ -14,7 +14,10 @@ html(lang='en')
       .info-container
         a(class='centered' href= path): p= title
         if webm
-          a(class='centered' href= path): video(src=image controls autoplay loop)
+          a(class='centered' href= path)
+            video(controls autoplay loop)
+              source(src= image + ".webm" type="video/webm")
+              source(src= image + ".mp4" type="video/mp4")
         else
           a(class='centered' href= path): img(src=image)
         if text
@@ -36,9 +39,9 @@ html(lang='en')
               li: a(href='https://spacepunk.media') spacepunk.media
           li: a(href='/about') about
       
-      +work-link('creative coding', 'https://zippy.gfycat.com/ComplicatedAggravatingAustraliansilkyterrier.webm', '/coding', true)
+      +work-link('creative coding', 'https://zippy.gfycat.com/DazzlingQuarterlyFanworms', '/coding', true)
       +work-link('installations', '/images/paintir.png', '/installations', false)
-      +work-link('motion graphics', 'https://zippy.gfycat.com/MiserableBetterBarb.webm', '/motion', true, 'examples of motion graphics work made in After Effects and Cinema 4D')    
+      +work-link('motion graphics', 'https://zippy.gfycat.com/MiserableBetterBarb', '/motion', true, 'examples of motion graphics work made in After Effects and Cinema 4D')    
       +work-link('3D renders', '/images/cinema4d/still/bead-bust-00.jpg', '/renders', false, 'a collection of renders made in Cinema 4D and edited in Photoshop and After Effects respectively')
       +work-link('visuals', '/images/atlantis-deep/img-00.png', '/visuals', false, 'a collection of images from live visual performances')
       +work-link('spacepunk.media', '/images/spacepunk.png', 'https://spacepunk.media', false)

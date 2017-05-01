@@ -19,12 +19,16 @@ html(lang='en')
             p(class='title centered')= title
         if link
           if webm
-            video(class='centered' src=image controls loop)
+            video(controls autoplay loop)
+              source(src= image + ".webm" type="video/webm")
+              source(src= image + ".mp4" type="video/mp4")
           else
             a(href=link): img(class='centered' src=image)
         else
           if webm
-            video(class='centered' src=image controls loop)
+            video(controls autoplay loop)
+              source(src= image + ".webm" type="video/webm")
+              source(src= image + ".mp4" type="video/mp4")
           else
             img(class='centered' src=image)
         
@@ -44,11 +48,11 @@ html(lang='en')
           li: a(href='/about') about
     
       +work-link('paint.IR', '/images/paintir.png', false, 'http://spacepunk.media/paintir')
-      +work-link('brite-lite', 'https://zippy.gfycat.com/HeavenlyThoughtfulBorer.webm', true)
+      +work-link('brite-lite', 'https://zippy.gfycat.com/HeavenlyThoughtfulBorer', true)
       +work-link('ghost in the machine', '/images/installations/interactive/ghosts.jpg', false)
-      +work-link('salt in the water', 'https://zippy.gfycat.com/ShabbyLeadingBlackwidowspider.webm', true)
-      +work-link('D.U.G. x DISJECTA', 'https://fat.gfycat.com/FrayedAjarHyrax.webm', true)
-      +work-link('walld art', 'https://zippy.gfycat.com/MeekGreenGhostshrimp.webm', true)
-      +work-link('digital avatar', 'https://thumbs.gfycat.com/AffectionateSnivelingGallowaycow-mobile.mp4', true, 'https://vimeo.com/163204617')    
+      +work-link('salt in the water', 'https://zippy.gfycat.com/ShabbyLeadingBlackwidowspider', true)
+      +work-link('D.U.G. x DISJECTA', 'https://fat.gfycat.com/FrayedAjarHyrax', true)
+      +work-link('walld art', 'https://zippy.gfycat.com/MeekGreenGhostshrimp', true)
+      +work-link('digital avatar', 'https://thumbs.gfycat.com/AffectionateSnivelingGallowaycow-mobile', true, 'https://vimeo.com/163204617')    
       
   script(src='javascripts/script.js')
