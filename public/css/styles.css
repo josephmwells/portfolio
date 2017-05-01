@@ -185,7 +185,7 @@ body {
   margin-top: 20px;
   padding: 10px;
 
-  font-size: 0.8em;
+  font-size: 0.85em;
 
   border-style: outset;
   border-width: 3px;
@@ -212,6 +212,11 @@ body {
 
 .info-container .info-text{
   display: none;
+}
+
+.info-container pre{
+  max-height: 300px;
+  overflow: scroll;
 }
 
 .info-container a{
