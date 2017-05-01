@@ -14,12 +14,12 @@ html(lang='en')
       .info-container
         if title
           if link
-            a(href=link): p(class='centered')= title
+            a(href=link): p(class='title centered')= title
           else
-            p(class='centered')= title
+            p(class='title centered')= title
         if link
           if webm
-            a(href=link): video(class='centered' src=image controls loop)
+            video(class='centered' src=image controls loop)
           else
             a(href=link): img(class='centered' src=image)
         else

@@ -12,7 +12,7 @@ html(lang='en')
     
     mixin work-link(title, image, path, webm, text)
       .info-container
-        a(class='centered title' href= path): p= title
+        a(class='centered' href= path): p= title
         if webm
           a(class='centered' href= path): video(src=image controls autoplay loop)
         else

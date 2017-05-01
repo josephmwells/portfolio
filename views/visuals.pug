@@ -13,10 +13,10 @@ html(lang='en')
     mixin work-link(title, image, webm, link)
       .info-container
         if title
-          p(class='centered')= title
+          p(class='centered title')= title
         if link
           if webm
-            a(href=link): video(class='centered' src=image controls loop)
+            video(class='centered' src=image controls loop)
           else
             a(href=link): img(class='centered' src=image)
         else

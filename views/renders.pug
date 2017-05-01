@@ -13,10 +13,10 @@ html(lang='en')
     mixin work-link(title, image, webm, text, link)
       .info-container
         if title
-          p(class='centered')= title
+          p(class='centered title')= title
         if link
           if webm
-            a(href=link): video(class='centered' src=image controls autoplay loop)
+            video(class='centered' src=image controls autoplay loop)
           else
             a(href=link): img(class='centered' src=image)
         else
@@ -45,6 +45,7 @@ html(lang='en')
           
       .info-container
         p(class='centered') a collection of renders made in Cinema 4D and edited in Photoshop and After Effects respectively
+        
       +work-link('bead bust', '/images/cinema4d/still/bead-bust-00-min.jpg', false, flase, '/images/cinema4d/still/bead-bust-00.jpg')
       +work-link('can not rest', '/images/cinema4d/still/laying-pose-1080-2-min.jpg', false, false, '/images/cinema4d/still/laying-pose-1080-2.jpg')
       +work-link("god's light", '/images/cinema4d/still/gods-light-min.jpg', false, false, '/images/cinema4d/still/gods-light.jpg')
