@@ -43,7 +43,7 @@ router.get("/installations",function(req,res){
 });
 
 router.get("/coding", function(req,res){
-  res.render('coding');
+  res.render('coding', { basedir : path.join(__dirname, '/views'});
 });
 
 app.use("/",router);
