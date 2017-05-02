@@ -1,14 +1,6 @@
 doctype html
 html(lang='en')
-  head
-    meta(charset='UTF-8')
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    title a portal to another world
-    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
-    //link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css')
-    //script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js')
-    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
-    link(href="css/styles.css" rel="stylesheet" type='text/css')
+  include ./head.pug
     
   body
     mixin work-link(title, image, webm)
@@ -19,7 +11,8 @@ html(lang='en')
           video(class='centered' src=image autoplay loop)
         else
           img(class='centered' src=image)
-        
+    
+    div(id='sketch-container')    
     .main-container
       .nav-container
         ul(class='nav-main')

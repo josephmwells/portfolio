@@ -1,12 +1,6 @@
 doctype html
 html(lang='en')
-  head
-    meta(charset='UTF-8')
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    title a portal to another world
-    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
-    link(href="css/styles.css" rel="stylesheet" type='text/css')
-    script(src='https://code.jquery.com/jquery-3.2.1.min.js')
+  include ./head.pug
     
   body
     
@@ -51,7 +45,8 @@ html(lang='en')
           if code == '5'
               pre(class='info-text')
                 include ./code/gridGen-grid.pde           
-  
+    
+    div(id='sketch-container')             
     .main-container
       .nav-container
         ul(class='nav-main')
