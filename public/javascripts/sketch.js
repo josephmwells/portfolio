@@ -59,3 +59,7 @@ function segment(x, y, a){
   line(0, 0, segLength, 0);
   pop();
 }
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
