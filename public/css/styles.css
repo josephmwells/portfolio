@@ -210,6 +210,15 @@ body {
   filter: invert(1);
 }
 
+.info-container .info-header:before {
+  display: inline-block;
+  position: relative;
+  content: "\2751";
+  margin-right: 3px;
+  text-decoration: none !important;
+
+}
+
 .info-container .info-text{
   display: none;
 }
