@@ -1,6 +1,6 @@
 var segLength = 20,
 dx, dy, angle,
-gridSize = 20,
+gridSize,
 stepSizeX, stepSizeY, count;
 
 function setup(){
@@ -9,17 +9,20 @@ function setup(){
 
   canvas.parent("sketch-container");
 
-  stepSizeX = width/gridSize;
-  stepSizeY = height/gridSize;
+
 }
 
 function draw(){
+  gridSize = windowWidth/75;
+  stepSizeX = windowWidth/gridSize;
+  stepSizeY = windowHeight/gridSize;
+
   //background(255); //Use this to update with a new background every frame
 
 
   noStroke();  //Use this block to have the background fade out
-  fill(255, 100); //producing fuzzy//blurry//psychadelic visuals
-  rect(0, 0, width, height);
+  fill(255, 200); //producing fuzzy//blurry//psychadelic visuals
+  rect(0, 0, windowWidth, windowHeight);
 
   stroke(137, 50);
   noFill();
@@ -31,8 +34,8 @@ function draw(){
 
   count = 0;
 
-  for(var i = stepSizeX; i < width; i += stepSizeX){
-    for(var j = stepSizeY; j < height; j += stepSizeY){
+  for(var i = stepSizeX; i <= windowWidth-stepSizeX; i += stepSizeX){
+    for(var j = stepSizeY; j <= windowHeight-stepSizeY; j += stepSizeY){
 
       dx = mouseX - i;
       dy = mouseY - j;
