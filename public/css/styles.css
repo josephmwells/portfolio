@@ -95,9 +95,13 @@ a{z-index: 50;}
     top: 0px;
     left: 0px;
   }
+
+  .main-container {
+    margin: 0 40%;
+  }
 }
 
-@media screen and (min-width: 975px){
+@media screen and (min-width: 1023px){
   .main-container {
     margin: 0 auto;
   }

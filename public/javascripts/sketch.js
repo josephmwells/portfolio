@@ -19,13 +19,26 @@ function draw(){
 
   //background(255); //Use this to update with a new background every frame
 
+  /*
   noStroke();        //Use this block to have the background fade out
-  fill(255, 200);    //producing fuzzy//blurry//psychadelic visuals
+  fill(255, 30);    //producing fuzzy//blurry//psychadelic visuals
   rect(0, 0, windowWidth, windowHeight);
-  stroke(137, 50);
+  stroke(150);
   noFill();
+  */
 
-  //stroke(0, 50);   //Use this to slowly draw darker lines as
+
+  if(!(frameCount%4)){
+    noStroke();
+    fill(255, 50);
+    rect(0,0,windowWidth, windowHeight);
+    stroke(50,50);
+    noFill();
+  }
+
+
+
+  //stroke(50, 25);   //Use this to slowly draw darker lines as
                       //the sketch continues to run
 
   count = 0;
@@ -38,7 +51,7 @@ function draw(){
       dy = mouseY - j;
       angle = atan2(dy, dx);
       segment(i, j, angle);
-      
+
 
       /*if(count%2){  //uncomment this block to add an offset to
         segment(i, j+stepSizeY/4, angle); //the vertical columns
