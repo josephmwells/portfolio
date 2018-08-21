@@ -17,7 +17,7 @@ function draw(){
   stepSizeX = windowWidth/gridSize;
   stepSizeY = windowHeight/gridSize;
 
-  //background(255); //Use this to update with a new background every frame
+  background(255); //Use this to update with a new background every frame
 
   /*
   noStroke();        //Use this block to have the background fade out
@@ -28,7 +28,7 @@ function draw(){
   */
 
 
-  if(!(frameCount%4)){
+  if(!(frameCount%1)){
     noStroke();
     fill(255, 50);
     rect(0,0,windowWidth, windowHeight);

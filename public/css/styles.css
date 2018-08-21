@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
-  letter-spacing: .10em;
+  letter-spacing: .02em;
   list-style: none;
 
   font-family: 'Inconsolata', monospace;
@@ -177,7 +177,7 @@ a{z-index: 50;}
   opacity: 0;
 
   white-space:nowrap;
-  overflow: hidden;
+  overflow: visible;
 
   transition: 0.4s 0s;
 }

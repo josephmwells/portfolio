@@ -25,6 +25,9 @@ html(lang='en')
               source(src= image + ".mp4" type="video/mp4")
           else
             img(class='centered' src=image)
+        if text
+          p(class='info-header') <strong>info</strong>
+          p(class='info-text')= text
     
     div(id='sketch-container')     
     .main-container
@@ -42,9 +45,10 @@ html(lang='en')
               li: a(href='https://spacepunk.media') spacepunk.media
           li: a(href='/about') about
     
-      +work-link('paint.IR', '/images/paintir.png', false, 'http://spacepunk.media/paintir')
+      +work-link('light drum', '/images/installations/light-drum.png', false, 'https://www.instagram.com/p/BfH9u4mlnbG/?utm_source=ig_web_copy_link')
+      +work-link('paint.IR', '/images/installations/paintir.png', false, 'http://spacepunk.media/paintir')
       +work-link('brite-lite', 'https://zippy.gfycat.com/HeavenlyThoughtfulBorer', true)
-      +work-link('ghost in the machine', '/images/installations/interactive/ghosts.jpg', false)
+      +work-link('ghost in the machine', '/images/installations/interactive/ghosts.jpg', false, false, "A hidden corner. A mysterious machine. Let the ghosts of our modern technology reveal to you the answers to the questions inside. Ghost in the Machine is an esoteric installation piece where the user can divine their own inner-self. Using mirrors and static, an illusion of mysticism is created, allowing the viewer to lose themselves in the myth of the experience.")
       +work-link('salt in the water', 'https://zippy.gfycat.com/ShabbyLeadingBlackwidowspider', true)
       +work-link('D.U.G. x DISJECTA', 'https://fat.gfycat.com/FrayedAjarHyrax', true)
       +work-link('walld art', 'https://zippy.gfycat.com/MeekGreenGhostshrimp', true)
